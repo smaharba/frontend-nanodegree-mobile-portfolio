@@ -1,3 +1,35 @@
+# My take on the **Website Performance Optimization portfolio project** and the **pizzeria 60 fps project**.
+
+
+### Website Performance Optimization portfolio project
+* async js
+* inline render blocking css
+* minified html, css, js
+* media queries print, portrait
+
+### pizzeria 60 fps project
+
+##### function updatePositions()
+* moved the scrolltop calc outside the for loop and 
+* made the effect a bit more lively (and annoying) => scrollTop / 250.
+* still some long frames. 
+* Tried rAF, no (positive) result.
+
+##### document.addEventListener('DOMContentLoaded', function() { etc.
+* reduced nr of cols to 6;
+* reduced nr of i's to 32, this is enough to make it work. 
+* Promoted .mover to its own layer (effect?). 
+* Moved the width and height attributes to the stylesheet (effect?)
+
+### gulp
+* I used gulp imagemin, minify-html, minify-css and uglify on the wpop project
+* I just minified the files (html, css, js, image) in the ‘views’ directory. No gulp.
+
+### bugs
+* there is still a loading issue. the rendering of the moving pizza’s on load causes FSL.
+* the pizza’s move smoothly but dev tools still shows some long frames.
+
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
@@ -6,7 +38,7 @@ To get started, check out the repository, inspect the code,
 
 ### Getting started
 
-####Part 1: Optimize PageSpeed Insights score for index.html
+#### Part 1: Optimize PageSpeed Insights score for index.html
 
 Some useful tips to help you get started:
 
@@ -30,7 +62,7 @@ Some useful tips to help you get started:
 
 Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
-####Part 2: Optimize Frames per Second in pizza.html
+#### Part 2: Optimize Frames per Second in pizza.html
 
 To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
 
@@ -51,23 +83,23 @@ You might find the FPS Counter/HUD Display useful in Chrome developer tools desc
 ### Customization with Bootstrap
 The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstrap</a> framework. All custom styles are in `dist/css/portfolio.css` in the portfolio repo.
 
-* <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
-* <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
+* [Bootstrap's CSS Classes](http://getbootstrap.com/css/)
+* [Bootstrap's Components](http://getbootstrap.com/components/)
 
 ### Sample Portfolios
 
 Feeling uninspired by the portfolio? Here's a list of cool portfolios I found after a few minutes of Googling.
 
-* <a href="http://www.reddit.com/r/webdev/comments/280qkr/would_anybody_like_to_post_their_portfolio_site/">A great discussion about portfolios on reddit</a>
-* <a href="http://ianlunn.co.uk/">http://ianlunn.co.uk/</a>
-* <a href="http://www.adhamdannaway.com/portfolio">http://www.adhamdannaway.com/portfolio</a>
-* <a href="http://www.timboelaars.nl/">http://www.timboelaars.nl/</a>
-* <a href="http://futoryan.prosite.com/">http://futoryan.prosite.com/</a>
-* <a href="http://playonpixels.prosite.com/21591/projects">http://playonpixels.prosite.com/21591/projects</a>
-* <a href="http://colintrenter.prosite.com/">http://colintrenter.prosite.com/</a>
-* <a href="http://calebmorris.prosite.com/">http://calebmorris.prosite.com/</a>
-* <a href="http://www.cullywright.com/">http://www.cullywright.com/</a>
-* <a href="http://yourjustlucky.com/">http://yourjustlucky.com/</a>
-* <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
-* <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
-* <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
+* [A great discussion about portfolios on reddit](http://www.reddit.com/r/webdev/comments/280qkr/would_anybody_like_to_post_their_portfolio_site/)
+* [ianlunn.co.uk/](http://ianlunn.co.uk/)
+* [www.adhamdannaway.com/portfolio](http://www.adhamdannaway.com/portfolio)
+* [www.timboelaars.nl/](http://www.timboelaars.nl/)
+* [futoryan.prosite.com/](http://futoryan.prosite.com/)
+* [playonpixels.prosite.com/21591/projects](http://playonpixels.prosite.com/21591/projects)
+* [colintrenter.prosite.com/](http://colintrenter.prosite.com/)
+* [calebmorris.prosite.com/](http://calebmorris.prosite.com/)
+* [www.cullywright.com/](http://www.cullywright.com/)
+* [yourjustlucky.com/](http://yourjustlucky.com/)
+* [nicoledominguez.com/portfolio/](http://nicoledominguez.com/portfolio/)
+* [www.roxannecook.com/](http://www.roxannecook.com/)
+* [www.84colors.com/portfolio.html](http://www.84colors.com/portfolio.html)
