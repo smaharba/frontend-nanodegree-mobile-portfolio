@@ -463,13 +463,13 @@ var resizePizzas = function(size) {
 		  	console.log('bug in size switcher');
 	  }
 	  
-	  var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
-	  	
-	      for (var i = 0; i < randomPizzas.length; i++) {
+	  	var randomPizzas = document.getElementsByClassName('randomPizzaContainer');
+	  	var randomPizzasLength = randomPizzas.length;
+	  	for (var i = 0; i < randomPizzasLength; i++) {
 		  	randomPizzas[i].style.width = newWidth + '%';
-    }
+    	}
   }
-
+	  	
   changePizzaSizes(size);
 
   // User Timing API is awesome
@@ -482,8 +482,8 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -523,17 +523,13 @@ function updatePositions() {
 
   var items = document.getElementsByClassName('mover');
   var scroll = document.body.scrollTop / 250;
+  var phase; 
   
-  for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin(scroll + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-  }
-  
-  var phase;
   for (var i = 0; i < items.length; i++) {
     phase = Math.sin(scroll + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
+  
   // User Timing API to the rescue again. Seriously, it's worth learning.
   // Super easy to create custom metrics.
   window.performance.mark("mark_end_frame");
@@ -557,8 +553,9 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 6;
   var s = 256;
+  var elem;
   for (var i = 0; i < 32; i++) {
-    var elem = document.createElement('img');
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.basicLeft = (i % cols) * s;
