@@ -36,11 +36,17 @@ form {
   left:300px;
   z-index: -1;
   will-change: transform;
-  transform: translateZ(0);
-  }
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;  
+ }
 
 .randomPizzaContainer {
   float: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 

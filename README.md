@@ -8,6 +8,8 @@
 * media queries print, portrait
 
 ### pizzeria 60 fps project
+##### general
+* changed various querySelector()s into getElementbyClassName() and getElementById()
 
 ##### function updatePositions()
 * moved the scrolltop calc outside the for loop and 
@@ -16,7 +18,6 @@
 * Tried rAF, no (positive) result.
 
 ##### document.addEventListener('DOMContentLoaded', function() { etc.
-* reduced nr of cols to 6;
 * reduced nr of i's to 32, this is enough to make it work. 
 * Promoted .mover to its own layer (effect?). 
 * Moved the width and height attributes to the stylesheet (effect?)
