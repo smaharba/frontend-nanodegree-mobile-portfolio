@@ -16,6 +16,7 @@ Creator:
 Cameron Pittman, Udacity Course Developer
 cameron *at* udacity *dot* com
 */
+
 /*Adjustments by Jaap Abrahams:
 
 - replaced a lot of querySelectors with getElementById and getElementByClassName
